@@ -38,7 +38,7 @@ Funkce:
             create  :   createNewTournament /tournament
             read    :   findAllTournaments  /tournament
                         findTournament      /tournament/{tournamentID}
-                        allPersonTrour..    /person/{personid}/tournament   // Native querry
+                        allPersonTournaments/person/{personid}/tournament   // Native querry
             update  :   UNSUPORTED
             delete  :   UNSUPORTED
             
