@@ -1,17 +1,24 @@
-TJV Semestrální Práce -- 2. kontrolní bod
+**TJV Semestrální Práce -- 2. kontrolní bod**
 
-Entity: Person
+Entity: 
+
+        Person
         Account
         Tournament
         
         *Address
 
-Vztahy:  Person -> 1:N -> Account
-        Account -> N:N -> Tournament
-        
-        *Person -> 1:1 -> Address
+Vztahy:
 
-Funkce: Person:     
+        Person  -> 1:N -> Account       // Jedna osoba může mít několik účtů
+        Account -> N:N -> Tournament    // Jeden účet se může zúčastnot několika turnajů
+                                        // Jeden turnaj má několik zúčastněných účtů
+        
+        *Person -> 1:1 -> Address       // Jedna adresa na jednu osobu
+
+Funkce:
+
+        Person:     
             create  :   createPerson        /person
             read    :   findAllPersonons    /person
                         findPerson          /person/{personID}
