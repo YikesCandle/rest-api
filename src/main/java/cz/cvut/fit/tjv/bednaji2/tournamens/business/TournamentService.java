@@ -22,8 +22,6 @@ public class TournamentService extends AbstractCrudService<Tournament, Long, Tou
     public TournamentService(TournamentRepository repository, AccountService accountService) {
         super(repository);
         this.accountService = accountService;
-        System.out.println("tests before commit");
-        System.out.println("tests before commit??");
     }
 
     public List<Tournament> getAllByIds(List<Long> allTournamentsOfPerson) {
