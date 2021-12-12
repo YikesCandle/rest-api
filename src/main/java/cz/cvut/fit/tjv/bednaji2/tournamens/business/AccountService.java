@@ -40,4 +40,8 @@ public class AccountService extends AbstractCrudService<Account, Long, AccountRe
                     HttpStatus.BAD_REQUEST, "email already exists");
         return repository.save(account);
     }
+
+    public List<Account> findAllByTournamentId(Long id) {
+        return repository.findAllByTournaments_tournamentId(id);
+    }
 }

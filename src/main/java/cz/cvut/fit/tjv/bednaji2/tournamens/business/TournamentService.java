@@ -1,5 +1,6 @@
 package cz.cvut.fit.tjv.bednaji2.tournamens.business;
 
+import cz.cvut.fit.tjv.bednaji2.tournamens.domain.Account;
 import cz.cvut.fit.tjv.bednaji2.tournamens.domain.NewTournament;
 import cz.cvut.fit.tjv.bednaji2.tournamens.domain.Tournament;
 import cz.cvut.fit.tjv.bednaji2.tournamens.repository.TournamentRepository;
@@ -59,5 +60,11 @@ public class TournamentService extends AbstractCrudService<Tournament, Long, Tou
                     HttpStatus.BAD_REQUEST, "the winner is not between competitors"
             );
         return repository.save(tournament);
+    }
+
+    public List<Account> findAllAccountsByTournamentId(Long id) {
+        if (!existsById(id))
+            throw new EntityNotFoundException();
+        return accountService.findAllByTournamentId(id);
     }
 }

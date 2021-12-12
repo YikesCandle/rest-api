@@ -9,7 +9,6 @@ import javax.persistence.AttributeOverride;
 import javax.persistence.AttributeOverrides;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 @Embeddable
@@ -36,13 +35,9 @@ import javax.validation.constraints.Size;
         )}
 )
 public class Address {
-    @NotBlank
     private String street;
-    @NotBlank
     private String city;
-    @NotBlank
     private String postalCode;
-    @NotBlank
-    @Size(min = 6, max = 14, message = "invalid phone number format")
+    @Size(max = 14, message = "invalid phone number format")
     private String phoneNumber;
 }

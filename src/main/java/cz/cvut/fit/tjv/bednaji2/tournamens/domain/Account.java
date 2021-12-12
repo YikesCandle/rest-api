@@ -29,7 +29,7 @@ public class Account {
     @JsonView(Views.Summary.class)
     @NotBlank(message = "Nick of account is cannot be blank.")
     @NotNull(message = "Nick of account is cannot be null.")
-    @Size(max = 16, min = 4, message = "Invalid nick size.")
+    @Size(max = 32, min = 4, message = "Invalid nick size.")
     private String nick;
 
     @Column(unique = true, nullable = false)

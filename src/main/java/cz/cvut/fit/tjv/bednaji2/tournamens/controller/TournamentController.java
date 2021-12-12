@@ -1,10 +1,10 @@
 package cz.cvut.fit.tjv.bednaji2.tournamens.controller;
 
 import cz.cvut.fit.tjv.bednaji2.tournamens.business.TournamentService;
+import cz.cvut.fit.tjv.bednaji2.tournamens.domain.Account;
 import cz.cvut.fit.tjv.bednaji2.tournamens.domain.NewTournament;
 import cz.cvut.fit.tjv.bednaji2.tournamens.domain.Tournament;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.util.Pair;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -35,5 +35,10 @@ public class TournamentController {
     @GetMapping("{tournamentId}")
     public Tournament findTournament(@PathVariable("tournamentId") Long id) {
         return tournamentService.findById(id);
+    }
+
+    @GetMapping("{tournamentId}/account")
+    public List<Account> findAllAccountsOfTournament(@PathVariable("tournamentId") Long id) {
+        return tournamentService.findAllAccountsByTournamentId(id);
     }
 }
