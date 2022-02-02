@@ -1,4 +1,4 @@
-**TJV Semestrální Práce -- 2. kontrolní bod**
+**TJV Semestrální Práce
 
 Entity: 
 
@@ -43,6 +43,4 @@ Funkce:
             delete  :   UNSUPORTED
             
 Databáze: Local Postgres
-
-Poznámky: errory nemám moc vychytané, testy +- něco dělají
             
