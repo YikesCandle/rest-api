@@ -1,4 +1,4 @@
-**TJV Semestrální Práce
+Rest api, lokální server, vyvýjený v prostředí Intellij Idea
 
 Entity: 
 
